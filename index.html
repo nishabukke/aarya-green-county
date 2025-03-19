@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>Aarya Green County</title>
+</head>
+<body>
+    <header id="header">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/home-banner1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/home-banner2.jpg" alt="">
+            </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="header-inner container-fluid">
+            <div class="left-header-inner">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="right-header-inner">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="home-banner-content">
+            <h1 class="text-white m-0">Let's Take You To Your Dream House</h1>
+            <p class="m-0 text-white">Pune, Maharashtra</p>
+            <a href="#" class="common-btn">Take a Tour</a>
+        </div>
+    </header>
+    
+    <main class="site-content">
+        <section class="about-section section_lg container">
+            <div class="left-about">
+                <img src="images/gallery1.jpg" alt="">
+            </div>
+            <div class="right-about">
+                <h2 class="common-heading">Property Information</h2>
+                <p class="m-0 secondary-color">Few word argue that, ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+                <ul class="listing">
+                    <li>Project Name : Arya Green County</li>
+                    <li>Total Area : 560 Square Feets</li>
+                    <li>Net Worth : $20,555,000</li>
+                    <li>Category : Modern House</li>
+                    <li>Ready for Possesion : 10 Jan, 2026</li>
+                </ul>
+                <a href="#" class="common-btn">Get Details</a>
+            </div>
+        </section>
+
+        <section class="amenities-section section_lg">
+            <h2 class="common-heading text-center">Property Amenities</h2>
+            <div class="container amenities-inner">
+                <div class="amenities-item">
+                    <img src="images/parking.png" alt="">
+                    <h5 class="common-heading m-0">Car Parking</h5>
+                    <p class="secondary-color text-center m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="amenities-item">
+                    <img src="images/clubhouse.png" alt="">
+                    <h5 class="common-heading m-0">Club House</h5>
+                    <p class="secondary-color text-center m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="amenities-item">
+                    <img src="images/swimming-pool.png" alt="">
+                    <h5 class="common-heading m-0">Swimming Pool</h5>
+                    <p class="secondary-color text-center m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="amenities-item">
+                    <img src="images/gym.png" alt="">
+                    <h5 class="common-heading m-0">Gym</h5>
+                    <p class="secondary-color text-center m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="photo-gallery-section section_lg container">
+            <h2 class="common-heading text-center">Photo Gallery</h2>
+            <div class="photo-gallery-inner">
+                <a href="images/gallery1.jpg" class="lightbox" title="">
+                    <img src="images/gallery1.jpg" alt="Thumbnail 1">
+                </a>
+                <a href="images/gallery2.jpg" class="lightbox" title="">
+                    <img src="images/gallery2.jpg" alt="Thumbnail 2">
+                </a>
+                <a href="images/gallery3.jpg" class="lightbox" title="">
+                    <img src="images/gallery3.jpg" alt="Thumbnail 3">
+                </a>
+                <a href="images//gallery4.jpg" class="lightbox" title="">
+                    <img src="images/gallery4.jpg" alt="Thumbnail 4">
+                </a>
+            </div>
+        </section>
+
+        <section class="property-layouts-section section_lg">
+            <h2 class="common-heading text-center">Property Layouts</h2> 
+            <div class="property-layout-inner container">
+                <div class="d-flex"> 
+                    <div class="TabButton TabButtonSelected" id="Tab1" onclick="activeTab(event, 'Tab1')">A Wing - 1bhk</div>
+                    <div class="TabButton " id="Tab2" onclick="activeTab(event, 'Tab2')">B Wing - 1bhk</div>
+                    <div class="TabButton " id="Tab3" onclick="activeTab(event, 'Tab3')">B Wing - 2bhk</div>
+                    <div class="TabButton " id="Tab4" onclick="activeTab(event, 'Tab4')">B Wing - 2bhk</div>
+                </div>
+                <div class="d-flex-col mt-5">
+                    <div id="SectionTab1" class="tab-section d-chart-n d-chart-show" >
+                        <div class="tab-section-inner">
+                            <div class="left-tabsection">
+                                <h4 class="common-heading m-0">A Wing - 1bhk</h4>
+                                <p class="secondary-color m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum in natus maxime quas quisquam assumenda iusto, optio, mollitia iure autem, voluptas laboriosam? Eveniet laborum numquam quidem quaerat nisi placeat nesciunt?</p>
+                                <ul class="listing">
+                                    <li>Total Area : 560 Square Feets</li>
+                                    <li>Room : 3</li>
+                                    <li>Bed : 1</li>
+                                    <li>Bath : 1</li>
+                                </ul>
+                            </div>
+                            <div class="right-tabsection">
+                                <img src="images/A-Wing-1bhk-bg.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="SectionTab2" class="tab-section d-chart-n">
+                        <div class="tab-section-inner">
+                            <div class="left-tabsection">
+                                <h4 class="common-heading m-0">B Wing - 1bhk</h4>
+                                <p class="secondary-color m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum in natus maxime quas quisquam assumenda iusto, optio, mollitia iure autem, voluptas laboriosam? Eveniet laborum numquam quidem quaerat nisi placeat nesciunt?</p>
+                                <ul class="listing">
+                                    <li>Total Area : 560 Square Feets</li>
+                                    <li>Room : 3</li>
+                                    <li>Bed : 1</li>
+                                    <li>Bath : 1</li>
+                                </ul>
+                            </div>
+                            <div class="right-tabsection">
+                                <img src="images/B-Wing-1bhk-bg.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="SectionTab3" class="tab-section d-chart-n">
+                        <div class="tab-section-inner">
+                            <div class="left-tabsection">
+                                <h4 class="common-heading m-0">B Wing - 2bhk</h4>
+                                <p class="secondary-color m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum in natus maxime quas quisquam assumenda iusto, optio, mollitia iure autem, voluptas laboriosam? Eveniet laborum numquam quidem quaerat nisi placeat nesciunt?</p>
+                                <ul class="listing">
+                                    <li>Total Area : 760 Square Feets</li>
+                                    <li>Room : 4</li>
+                                    <li>Bed : 2</li>
+                                    <li>Bath : 2</li>
+                                </ul>
+                            </div>
+                            <div class="right-tabsection">
+                                <img src="images/B-Wing-2bhk-bg.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="SectionTab4" class="tab-section d-chart-n">
+                        <div class="tab-section-inner">
+                            <div class="left-tabsection">
+                                <h4 class="common-heading m-0">B Wing - 2bhk</h4>
+                                <p class="secondary-color m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum in natus maxime quas quisquam assumenda iusto, optio, mollitia iure autem, voluptas laboriosam? Eveniet laborum numquam quidem quaerat nisi placeat nesciunt?</p>
+                                <ul class="listing">
+                                    <li>Total Area : 760 Square Feets</li>
+                                    <li>Room : 4</li>
+                                    <li>Bed : 2</li>
+                                    <li>Bath : 2</li>
+                                </ul>
+                            </div>
+                            <div class="right-tabsection">
+                                <img src="images/B-Wing-2bhk-104-bg.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section section_lg">
+            <div class="video-content container">
+                <h2 class="common-heading text-white text-center m-0">The Pleasant Surroundings of Nature Will Impress You</h2>
+                <p class="text-white m-0 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque libero quibusdam facilis, recusandae sit dolores sed voluptatibus nesciunt adipisci, vero veritatis, odit cupiditate architecto quos.</p>
+                <i class="fa-solid fa-play"></i>
+                <div class="player-wave popup-video-inner">
+                    <div class="waves wave-1"></div>
+                    <div class="waves wave-2"></div>
+                    <div class="waves wave-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section section_lg ">
+            <h2 class="common-heading text-center m-0">People Trust Us</h2>
+            <div class="testimonial-inner container">
+                <div class="testimonial-item">
+                    <p class="secondary-color m-0"><em>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis architecto eum dolores ullam dolore reprehenderit quam numquam aspernatur necessitatibus ipsam reiciendis voluptatum voluptates quibusdam sapiente minima vero iure praesentium, exercitationem fugit alias corporis, vel nam? Magnam delectus harum perferendis quibusdam."</em></p>
+                    <h5 class="common-heading m-0">John Doe</h5>
+                </div>
+                <div class="testimonial-item">
+                    <p class="secondary-color m-0"><em>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis architecto eum dolores ullam dolore reprehenderit quam numquam aspernatur necessitatibus ipsam reiciendis voluptatum voluptates quibusdam sapiente minima vero iure praesentium, exercitationem fugit alias corporis, vel nam? Magnam delectus harum perferendis quibusdam."</em></p>
+                    <h5 class="common-heading m-0">John Doe</h5>
+                </div>
+                <div class="testimonial-item">
+                    <p class="secondary-color m-0"><em>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis architecto eum dolores ullam dolore reprehenderit quam numquam aspernatur necessitatibus ipsam reiciendis voluptatum voluptates quibusdam sapiente minima vero iure praesentium, exercitationem fugit alias corporis, vel nam? Magnam delectus harum perferendis quibusdam."</em></p>
+                    <h5 class="common-heading m-0">John Doe</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.70906702869!2d73.69815139367944!3d18.524870612673507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1742382338322!5m2!1sen!2sin" width="100%" height="450" style="border:0; margin-bottom: -5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-inner container section_lg">
+            <div class="footer-item">
+                <img src="images/nirmitee logo.png" alt="">
+                <ul>
+                    <li><span>Address: </span> Pune, Maharashtra</li>
+                    <li><span>Email: </span> <a href="mailto:someone@example.com">someone@example.com</a></li>
+                    <li><span>Phone: </span> <a href="tel:1234567890">+12345 67890</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3 class="common-heading text-white m-0">Opening Hours</h3>
+                <ul>
+                    <li>Monday – Thursday : 10AM to 6PM</li>
+                    <li>Friday – Saturday : 11AM to 4PM</li>
+                    <li>Sunday: Close</li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3 class="common-heading text-white m-0">Subscribe Newsletter</h3>
+                <p class="text-white m-0">Subscribe to our newsletter & always be aware of all the latest updates</p>
+                <input type="email" name="email" placeholder="Your email address" id="">
+            </div>
+        </div>
+        <hr>
+        <div class="lower-footer">
+            <div class="copyright txt-center text-white">Copyrights © 2025 Aarya Green County. All rights reserved.</div>
+            <div class="social-icons">
+                <a href="" class="fa-brands fa-facebook"></a>
+                <a href="" class="fa-brands fa-instagram"></a>
+                <a href="" class="fa-brands fa-youtube"></a>
+                <a href="" class="fa-brands fa-x-twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+</body>
+</html>
