@@ -4,7 +4,6 @@ body{
     margin: 0px auto;
     max-width: 1600px;
     padding: 0;
-    margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -154,8 +153,8 @@ a{
 /* logo section css start */
 
 .logo-section img{
-    width: 150px;
-    height: 60px;
+    /* width: 150px; */
+    height: 70px;
 }
 
 .logo-section{
