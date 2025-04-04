@@ -32,7 +32,7 @@ a{
 }
 
 .section_lg{
-    padding: 80px 0px;
+    padding: 60px 0px;
 }
 
 .common-heading{
@@ -162,7 +162,7 @@ a{
     display: flex;
     gap: 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 /* logo section css end */
@@ -624,7 +624,6 @@ display: block;
 .specification-item{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 15px;
     padding: 20px;
@@ -693,10 +692,20 @@ display: block;
     gap: 25px;
 }
 
-.footer-item img{
+.footer-imgs{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-imgs img{
     width: 130px;
+    height: 130px;
     padding: 10px;
     background-color: #fff;
+}
+
+.footer-item .rera-img{
+    width: 100%;
 }
 
 .footer-item ul li{
