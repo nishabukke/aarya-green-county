@@ -13,11 +13,11 @@
 <body>
     <header id="header">
             <div class="swiper-slide">
-                <img src="images/home-banner1.jpeg" alt="">
+                <img src="images/home-banner1.jpg" alt=""  loading="lazy">
             </div>
         <div class="header-inner container-fluid">
             <div class="left-header-inner">
-                <img src="images/logo.png" alt="">
+                <img src="images/logo.png" alt=""  loading="lazy">
             </div>
             <div class="right-header-inner">
                 <a href="index.html">Home</a>
@@ -28,14 +28,33 @@
             </div>
         </div>
         <div class="home-banner-content">
-            <a href="#" class="enquiry-btn"onclick="openModal()">Enquire Now <span class="fas fa-arrow-right"></span></a>
+            <form id="enquiryForm">
+                <h2 class="common-heading text-white text-center mb-4">Enquire Now</h2>
+                <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Your email-id">
+                </div>
+                <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Your phone no.">
+                </div>
+                <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+                </div>
+                <input type="submit" class="submit-btn" value="Submit Enquiry"></input>
+            </form>
         </div>
     </header>
 
     <div class="mobile-header">
         <div class="mobile-menu-container">
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png" alt=""></a>
+                <a href="index.html"><img src="images/logo.png" alt="" loading="lazy"></a>
             </div>
             <div class="mobile-menu">
                 <a class="canva_expander nav-menu-link menu-button" href="#">
@@ -58,14 +77,37 @@
       </div>
     
     <main class="site-content">
+        <section class="enquiry-form-section section_lg container pb-0">
+            <form id="enquiryForm">
+                <div class="form-group">
+                    <h2 class="common-heading text-white text-center mb-4">Enquire Now</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Your email-id">
+                </div>
+                <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Your phone no.">
+                </div>
+                <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+                </div>
+                <input type="submit" class="submit-btn" value="Submit Enquiry"></input>
+            </form>
+        </section>
+
         <section class="about-section section_lg container" id="about">
             <div class="left-about">
-                <img src="images/about-img1.jpg" alt="">
+                <img src="images/about-img1.jpg" alt="" loading="lazy">
             </div>
             <div class="right-about">
                 <div class="nirmitee-heading-section">
                     <h2 class="common-heading green-heading">Nirmitee Homes </h2>
-                    <img src="images/leaf-img.png" alt="" class="leaf-img">
+                    <img src="images/leaf-img.png" alt="" class="leaf-img" loading="lazy">
                 </div>
                 <h2 class="common-heading">1 & 2 BHK Affordable Residences Near Bhor Town</h2>
                 <p class="m-0 secondary-color">Nestled amidst lush green hills near Bhor Town, Aarya Green County offers a perfect blend of nature, comfort, and affordability. Strategically located, the project provides seamless connectivity while ensuring a peaceful living experience. Thoughtfully designed, these spacious homes cater to salaried professionals, including government employees, teachers, and Shirwal MIDC workers (13-14 km away).</p>
@@ -79,30 +121,30 @@
                 <div class="left-highlight">
                     <div class="heading-section" id="highlight-heading">
                         <h2 class="common-heading text-white">Property Highlights</h2>
-                        <img src="images/leaf-small-img.png" alt="">
+                        <img src="images/leaf-small-img.png" alt="" loading="lazy">
                     </div>
                     <hr>
                 </div>
                 <div class="right-highlight">
                     <div class="right-highlight-item">
-                        <img src="images/cctv-camera.png" alt="">
-                        <h6 class="text-white m-0">CCTV Camera Facility Available</h6>
+                        <img src="images/cctv-camera.png" alt="" loading="lazy">
+                        <h5 class="text-white m-0">CCTV Camera Facility Available</h5>
                     </div>
                     <div class="right-highlight-item">
-                        <img src="images/elevator.png" alt="">
-                        <h6 class="text-white m-0">Facility of 2 lifts per building (With Power Backup)</h6>
+                        <img src="images/elevator.png" alt="" loading="lazy">
+                        <h5 class="text-white m-0">Facility of 2 lifts per building (With Power Backup)</h5>
                     </div>
                     <div class="right-highlight-item">
-                        <img src="images/fire.png" alt="">
-                        <h6 class="text-white m-0">Fire Fighting System</h6>
+                        <img src="images/fire.png" alt="" loading="lazy">
+                        <h5 class="text-white m-0">Fire Fighting System</h5>
                     </div>
                     <div class="right-highlight-item">
-                        <img src="images/heater.png" alt="">
-                        <h6 class="text-white m-0">Solar Water System</h6>
+                        <img src="images/heater.png" alt="" loading="lazy">
+                        <h5 class="text-white m-0">Solar Water System</h5>
                     </div>
                     <div class="right-highlight-item">
-                        <img src="images/water.png" alt="">
-                        <h6 class="text-white m-0">24hrs Clean Water</h6>
+                        <img src="images/water.png" alt="" loading="lazy">
+                        <h5 class="text-white m-0">24hrs Clean Water</h5>
                     </div>
                 </div>
             </div>
@@ -112,7 +154,7 @@
         <section class="property-layouts-section section_lg" id="floor_plans">
             <div class="heading-section"  id="pl-heading">
                 <h2 class="common-heading text-center">Property Layouts</h2> 
-                <img src="images/leaf-small-img.png" alt="">
+                <img src="images/leaf-small-img.png" alt=""  loading="lazy">
             </div>
             <hr>
             <div class="property-layout-inner container">
@@ -136,7 +178,7 @@
                                 </ul>
                             </div>
                             <div class="right-tabsection">
-                                <img src="images/B-Wing-1bhk-bg.png" alt="">
+                                <img src="images/B-Wing-1bhk-bg.png" alt=""  loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -153,7 +195,7 @@
                                 </ul>
                             </div>
                             <div class="right-tabsection">
-                                <img src="images/B-Wing-2bhk-bg.png" alt="">
+                                <img src="images/B-Wing-2bhk-bg.png" alt=""  loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -170,7 +212,7 @@
                                 </ul>
                             </div>
                             <div class="right-tabsection">
-                                <img src="images/B-Wing-2bhk-104-bg.png" alt="">
+                                <img src="images/B-Wing-2bhk-104-bg.png" alt=""  loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -180,7 +222,7 @@
                                 <h4 class="common-heading m-0">Under Construction</h4>
                             </div>
                             <div class="right-tabsection">
-                                <img src="images/under-construction.png" alt="">
+                                <img src="images/under-construction.png" alt=""  loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -191,63 +233,63 @@
         <section class="amenities-section section_lg" id="amenities">
             <div class="heading-section" id="amenities-heading">
                 <h2 class="common-heading text-center">Amenities</h2> 
-                <img src="images/leaf-small-img.png" alt="">
+                <img src="images/leaf-small-img.png" alt="" loading="lazy">
             </div>
             <hr>
             <div class="container amenities-inner">
                 <div class="amenities-item">
                     <div class="amenities-overlay"></div>
-                    <img src="images/parking.jpg" alt="">
+                    <img src="images/parking.jpg" alt=""  loading="lazy">
                     <h6 class="common-heading m-0">Ample Parking Space</h6>
                 </div>
                 <div class="amenities-item">
                     <div class="amenities-overlay"></div>
-                    <img src="images/gallery2.jpg" alt="">
+                    <img src="images/gallery2.jpg" alt=""  loading="lazy">
                     <h6 class="common-heading m-0">Club House</h6>
                 </div>
                 <div class="amenities-item">
                     <div class="amenities-overlay"></div>
-                    <img src="images/childrens-swimming-pool.avif" alt="">
+                    <img src="images/childrens-swimming-pool.avif" alt=""  loading="lazy">
                     <h6 class="common-heading m-0">Children Swimming Pool</h6>
                 </div>
                 <div class="amenities-item">
                     <div class="amenities-overlay"></div>
-                    <img src="images/gallery3.jpg" alt="">
+                    <img src="images/gallery3.jpg" alt=""  loading="lazy">
                     <h6 class="common-heading m-0">Internal Cement Road</h6>
                 </div>
                 <div class="amenities-item">
                     <div class="amenities-overlay"></div>
-                    <img src="images/jogging-track.jpg" alt="">
+                    <img src="images/jogging-track.jpg" alt=""  loading="lazy">
                     <h6 class="common-heading m-0">Jogging Track</h6>
                 </div>
                 <div class="amenities-item">
                     <div class="amenities-overlay"></div>
-                    <img src="images/children-ground.jpg" alt="">
+                    <img src="images/children-ground.jpg" alt=""  loading="lazy">
                     <h6 class="common-heading m-0">Children's Play Area</h6>
                 </div>
                 <div class="amenities-item">
                     <div class="amenities-overlay"></div>
-                    <img src="images/landscape-garden.jpg" alt="">
+                    <img src="images/landscape-garden.jpg" alt=""  loading="lazy">
                     <h6 class="common-heading m-0">Landscape Garden</h6>
                 </div>
                 <div class="amenities-item">
                     <div class="amenities-overlay"></div>
-                    <img src="images/party-lawn.jpg" alt="">
+                    <img src="images/party-lawn.jpg" alt=""  loading="lazy">
                     <h6 class="common-heading m-0">Party Lawn</h6>
                 </div>
                 <div class="amenities-item">
                     <div class="amenities-overlay"></div>
-                    <img src="images/multipurpose-hall.jpg" alt="">
+                    <img src="images/multipurpose-hall.jpg" alt=""  loading="lazy">
                     <h6 class="common-heading m-0">Multipurpose Hall</h6>
                 </div>
                 <div class="amenities-item">
                     <div class="amenities-overlay"></div>
-                    <img src="images/best-location.jpg" alt="">
+                    <img src="images/best-location.jpg" alt=""  loading="lazy">
                     <h6 class="common-heading m-0">Best Location</h6>
                 </div>
                 <div class="amenities-item">
                     <div class="amenities-overlay"></div>
-                    <img src="images/vastu.jpg" alt="">
+                    <img src="images/vastu.jpg" alt=""  loading="lazy">
                     <h6 class="common-heading m-0">Aesthetically Vastu</h6>
                 </div>
             </div>
@@ -257,7 +299,7 @@
         <section class="photo-gallery-section section_lg">
             <div class="heading-section" id="gallery-heading">
                 <h2 class="common-heading text-center">Photo Gallery</h2> 
-                <img src="images/leaf-small-img.png" alt="">
+                <img src="images/leaf-small-img.png" alt=""  loading="lazy">
             </div>
             <hr>
             <div class="photo-gallery-inner">
@@ -273,12 +315,12 @@
             <div class="video-content container">
                 <div class="heading-section" id="video-heading">
                     <h2 class="common-heading text-white text-center">The Pleasant Surroundings of Nature Will Impress You</h2>
-                    <img src="images/leaf-small-img.png" alt="">
+                    <img src="images/leaf-small-img.png" alt=""  loading="lazy">
                     <hr>
                 </div>
                 <p class="text-white m-0 text-center">Imagine waking up to the soothing sounds of birds chirping, the gentle rustling of leaves, and the crisp, refreshing breeze flowing through your home. Nestled amidst lush greenery, our real estate project offers you the perfect blend of modern living and natural beauty.</p>
                 <div class="video-play-div">
-                    <img src="images/video-photo.png" alt="" class="video-preview">
+                    <img src="images/video-photo.png" alt=""  loading="lazy" class="video-preview">
                 </div>
                 <i class="fas fa-play" id="playVideoBtn"></i>
                 <div class="player-wave popup-video-inner">
@@ -292,14 +334,14 @@
         <section class="specification-section section_lg container">
             <div class="heading-section" id="specification-heading">
                 <h2 class="common-heading text-center m-0">Specifications</h2>
-                <img src="images/leaf-small-img.png" alt="">
+                <img src="images/leaf-small-img.png" alt=""  loading="lazy">
             </div>
             <hr>
             <div class="specification-inner">
                 <div class="specification-item">
                     <div class="spec-heading">
                         <h6 class="m-0">RCC Construction</h6>
-                        <img src="images/construction.png" alt="">
+                        <img src="images/construction.png" alt=""  loading="lazy">
                     </div>
                     <ul>
                         <li>RCC frame structure designed as per earthquake-resistant norms.</li>
@@ -309,7 +351,7 @@
                 <div class="specification-item">
                     <div class="spec-heading">
                         <h6 class="m-0">Flooring</h6>
-                        <img src="images/floor.png" alt="">
+                        <img src="images/floor.png" alt=""  loading="lazy">
                     </div>
                     <ul>
                         <li>Good quality reputed brand tiles of size 24" x 24" for all rooms.</li>
@@ -318,7 +360,7 @@
                 <div class="specification-item">
                     <div class="spec-heading">
                         <h6 class="m-0">Kitchen</h6>
-                        <img src="images/kitchen-set.png" alt="">
+                        <img src="images/kitchen-set.png" alt=""  loading="lazy">
                     </div>
                     <ul>
                         <li>Granite stone for kitchen otta with stainless steel sink</li>
@@ -330,7 +372,7 @@
                 <div class="specification-item">
                     <div class="spec-heading">
                         <h6 class="m-0">Electrical</h6>
-                        <img src="images/plugin.png" alt="">
+                        <img src="images/plugin.png" alt=""  loading="lazy">
                     </div>
                     <ul>
                         <li>Modular Switches.</li>
@@ -343,7 +385,7 @@
                 <div class="specification-item">
                     <div class="spec-heading">
                         <h6 class="m-0">Toilet</h6>
-                        <img src="images/public-toilet.png" alt="">
+                        <img src="images/public-toilet.png" alt=""  loading="lazy">
                     </div>
                     <ul>
                         <li>Concealed Internal Plumbing.</li>
@@ -356,7 +398,7 @@
                 <div class="specification-item">
                     <div class="spec-heading">
                         <h6 class="m-0">Internal Finishing</h6>
-                        <img src="images/interior-design.png" alt="">
+                        <img src="images/interior-design.png" alt=""  loading="lazy">
                     </div>
                     <ul>
                         <li>Oil & Distemper color for walls.</li>
@@ -367,7 +409,7 @@
                 <div class="specification-item">
                     <div class="spec-heading">
                         <h6 class="m-0">Doors</h6>
-                        <img src="images/door.png" alt="">
+                        <img src="images/door.png" alt=""  loading="lazy">
                     </div>
                     <ul>
                         <li>Wooden Door Frame with brass fitting for internal doors.</li>
@@ -377,7 +419,7 @@
                 <div class="specification-item">
                     <div class="spec-heading">
                         <h6 class="m-0 text-center">Windows</h6>
-                        <img src="images/window.png" alt="">
+                        <img src="images/window.png" alt=""  loading="lazy">
                     </div>
                     <ul>
                         <li>MS safety grills.</li>
@@ -389,7 +431,7 @@
                 <div class="specification-item">
                     <div class="spec-heading">
                         <h6 class="m-0 text-center">External Finishing</h6>
-                        <img src="images/apartment-icon.png" alt="">
+                        <img src="images/apartment-icon.png" alt=""  loading="lazy">
                     </div>
                     <ul>
                         <li>Texture paint on external walls.</li>
@@ -419,7 +461,7 @@
         </section> -->
 
         <section class="map-section">
-            <img src="images/map-light.jpeg" alt="">
+            <img src="images/map-light.jpeg" alt=""  loading="lazy">
         </section>
     </main>
 
@@ -427,8 +469,8 @@
         <div class="footer-inner container section_lg">
             <div class="footer-item">
                 <div class="footer-imgs">
-                    <img src="images/nirmitee logo.png" alt="">
-                    <img src="images/rera-barcode.jpeg" alt="">
+                    <img src="images/nirmitee logo.png" alt=""  loading="lazy">
+                    <img src="images/rera-barcode.jpeg" alt=""  loading="lazy">
                 </div>
                 <ul>
                     <li><span class="fw-bold">Address : </span> Sr.No. 235, Bhoreshwar Nagar, Near Bhoreshwar Lawns, Bhor, Dist. Pune - 412 206</li>
@@ -457,14 +499,14 @@
                     <label for="phone">Phone Number:</label>
                     <input type="tel" id="phone" name="phone" required>
                     </div>
-                    <input type="submit" class="common-btn" value="Submit Enquiry"></input>
+                    <input type="submit" class="submit-btn" value="Submit Enquiry"></input>
                 </form>
             </div>
             <div class="footer-item">
                 <h3 class="common-heading text-white m-0">Subscribe Newsletter</h3>
                 <p class="text-white m-0">Subscribe to our newsletter & always be aware of all the latest updates</p>
                 <input type="email" name="email" placeholder="Your email address" id="" class="subscribe">
-                <img src="images/rera.png" alt="" class="rera-img">
+                <img src="images/rera.png" alt=""  loading="lazy" class="rera-img">
             </div>
         </div>
         <hr>
