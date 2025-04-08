@@ -20,16 +20,31 @@ body{
 
   .heading-section{
     position: relative;
+    width: max-content;
+    margin: 0px auto;
+  }
+
+  .nirmitee-heading-section{
+    width: max-content;
+    position: relative;
+  }
+
+  .nirmitee-heading-section img{
+    position: absolute;
+    right: -35px;
+    top: -13px;
+    width: 30px;
   }
 
   .heading-section img{
     width: 20px;
     position: absolute;
     top: 0;
+    right: -25px;
     transform: rotate(45deg);
   }
 
-  #highlight-heading img{
+  /* #highlight-heading img{
     right: 38%;
   }
 
@@ -55,7 +70,7 @@ body{
 
   #highlight-heading img {
     right: 17%;
-}
+} */
 
  .heading-section ~ hr, .heading-section hr{
     color: #45a049;
@@ -234,13 +249,6 @@ a{
 
 .right-about p{
     line-height: 1.8;
-}
-
-.leaf-img{
-    position: absolute;
-    right: 55%;
-    top: -2%;
-    width: 30px;
 }
 
 .listing li{
@@ -1126,32 +1134,6 @@ input[type='submit']{
     /* background-color: #fff; */
 }
 
-@media screen and (max-width:1440px) {
-    .leaf-img {
-        right: 61%;
-    }
-
-    #highlight-heading img {
-        right: 28%;
-        top: 2%;
-    }
-
-    #specification-heading img {
-        right: 39%;
-    }
-
-    #gallery-heading img {
-        right: 40.5%;
-    }
-
-    #amenities-heading img {
-        right: 42.5%;
-    }
-    
-    #pl-heading img {
-        right: 38.5%;
-    }
-}
 
 @media screen and (max-width:768px){
     .header-inner{
@@ -1290,32 +1272,7 @@ input[type='submit']{
         height: 30px;
     }
 
-    #highlight-heading img {
-        right: 27%;
-    }
-    
-    #pl-heading img {
-        right: 30%;
-    }
-    
-    #amenities-heading img {
-        right: 37%;
-    }
-    
-    #gallery-heading img {
-        right: 33.5%;
-    }
-    
-    #video-heading img {
-        right: 25%;
-        top: 50%;
-    }
-    
-    #specification-heading img {
-        right: 32%;
-    }
-    
-      .heading-section ~ hr{
+      .heading-section ~ hr, .heading-section hr{
         color: #45a049;
         background-color: #45a049;
         height: 3px;
@@ -1324,7 +1281,7 @@ input[type='submit']{
         display: flex;
         opacity: 1;
       }
-  }
+  } 
 
   @media screen and (max-width:450px){
     .header-inner{
@@ -1450,33 +1407,8 @@ input[type='submit']{
         width: 30px;
         height: 30px;
     }
-
-    #highlight-heading img{
-        right: 3%;
-      }
     
-      #pl-heading img{
-        right: 10%;
-      }
-    
-      #amenities-heading img{
-        right: 22%;
-      }
-    
-      #gallery-heading img{
-        right: 16%;
-      }
-    
-        #video-heading img {
-            right: 6%;
-            top: 74%;
-        }
-    
-      #specification-heading img{
-        right: 15%;
-      }
-    
-      .heading-section ~ hr{
+      .heading-section ~ hr, .heading-section hr{
         color: #45a049;
         background-color: #45a049;
         height: 3px;
@@ -1484,5 +1416,5 @@ input[type='submit']{
         margin: 10px auto 0 auto;
         display: flex;
         opacity: 1;
-      }
+      } 
   }
