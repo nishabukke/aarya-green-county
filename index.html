@@ -11,7 +11,7 @@
     <title>Aarya Green County</title>
 </head>
 <body>
-    <!-- <div id="preloader"></div>  -->
+    <div id="preloader"></div> 
     <header id="header">
             <div class="swiper-slide">
                 <img src="images/home-banner1.jpeg" alt="">
@@ -603,6 +603,23 @@ $(this).siblings().addClass('is-active');
         iframe.src = "";
       }
     };
+
+
+    // loader js
+
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+      document.querySelector(
+          "body").style.visibility = "hidden";
+      document.querySelector(
+          "#preloader").style.visibility = "visible";
+  } else {
+      document.querySelector(
+          "#preloader").style.display = "none";
+      document.querySelector(
+          "body").style.visibility = "visible";
+  }
+  };
   </script>
   
 </body>

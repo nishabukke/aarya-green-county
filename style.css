@@ -257,7 +257,7 @@ a{
 /* project highlight section css start */
 
 .project-highlight-section{
-    background-image: url('images/about-img.jpg');
+    background-image: url('images/home-banner2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% center;
@@ -550,7 +550,7 @@ display: block;
     background-image: url('images/home-banner1.jpg');
     background-repeat: no-repeat;
     background-position: 100% 100%;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover;
     position: relative;
 }
