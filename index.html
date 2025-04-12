@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Aarya Green County</title>
 </head>
 <body>
+    <button class=" display-desk btn btn-nav" id="fixedbutton_visit" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+        <span class="animated d-block" style="animation-duration: 3s;">Book A Site Visit</span>
+    </button>
     <header id="header">
             <div class="swiper-slide">
-                <img src="images/home-banner1.jpg" alt=""  loading="lazy">
+                <img src="images/home-banner1.png" alt=""  loading="lazy">
             </div>
         <div class="header-inner container-fluid">
             <div class="left-header-inner">
@@ -24,11 +29,11 @@
                 <a href="#about">About</a>
                 <a href="#amenities">Amenities</a>
                 <a href="#floor_plans">Floor Plans</a>
-                <a href="tel:+919923693241" class="contact-link">+91 9923 693 241</a>
+                <!-- <a href="tel:+919923693241" class="contact-link">+91 9923 693 241</a> -->
             </div>
         </div>
         <div class="home-banner-content">
-            <form id="enquiryForm">
+            <form id="headerForm">
                 <h2 class="common-heading text-white text-center mb-4">Enquire Now</h2>
                 <div class="form-group">
                 <label for="name">Full Name:</label>
@@ -41,10 +46,6 @@
                 <div class="form-group">
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required placeholder="Your phone no.">
-                </div>
-                <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
                 </div>
                 <input type="submit" class="submit-btn" value="Submit Enquiry"></input>
             </form>
@@ -92,10 +93,6 @@
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required placeholder="Your phone no.">
                 </div>
-                <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
-                </div>
                 <input type="submit" class="submit-btn" value="Submit Enquiry"></input>
             </form>
         </section>
@@ -123,7 +120,7 @@
                         <h2 class="common-heading text-white">Property Highlights</h2>
                         <img src="images/leaf-small-img.png" alt="" loading="lazy">
                     </div>
-                    <hr>
+                    <!-- <hr>  -->
                 </div>
                 <div class="right-highlight">
                     <div class="right-highlight-item">
@@ -151,82 +148,85 @@
 
         </section>
         
-        <section class="property-layouts-section section_lg" id="floor_plans">
+        <section class="property-layouts-section section_lg container" id="floor_plans">
             <div class="heading-section"  id="pl-heading">
                 <h2 class="common-heading text-center">Property Layouts</h2> 
                 <img src="images/leaf-small-img.png" alt=""  loading="lazy">
             </div>
-            <hr>
-            <div class="property-layout-inner container">
-                <div class="d-flex"> 
-                    <div class="TabButton TabButtonSelected" id="Tab1" onclick="activeTab(event, 'Tab1')">B Wing - 1 BHK</div>
-                    <div class="TabButton" id="Tab2" onclick="activeTab(event, 'Tab2')">B Wing - 2 BHK</div>
-                    <div class="TabButton" id="Tab3" onclick="activeTab(event, 'Tab3')">B Wing - 2 BHK</div>
-                    <div class="TabButton" id="Tab4" onclick="activeTab(event, 'Tab4')">A Wing - 1 BHK</div>
+            <!-- <hr>  -->
+            <div class="property-layout-inner">
+                <div class="property-layout-item">
+                    <div class="property-layout-img">
+                        <img src="images/A-Wing-1bhk-bg.png" alt="">
+                        <div class="request-floor-plan">
+                            <a href="" data-bs-toggle="modal" data-bs-target="#enquiryModal">Request Floor Plan</a>
+                        </div>
+                    </div>
+                    <h4 class=" text-center mt-2">1 BHK</h4>
                 </div>
-                <div class="d-flex-col mt-5">
-                    <div id="SectionTab1" class="tab-section d-chart-n d-chart-show">
-                        <div class="tab-section-inner">
-                            <div class="left-tabsection">
-                                <h4 class="common-heading m-0">B Wing - 1 BHK</h4>
-                                <p class="secondary-color m-0">Experience the perfect blend of comfort and affordability with our thoughtfully designed 1 BHK flats. Ideal for young professionals, couples, and small families, these homes maximize space efficiency while offering modern amenities.</p>
-                                <ul class="listing">
-                                    <li>Total Area : 590 Square Feets</li>
-                                    <li>Room : 3</li>
-                                    <li>Bed : 1</li>
-                                    <li>Bath : 1</li>
-                                </ul>
-                            </div>
-                            <div class="right-tabsection">
-                                <img src="images/B-Wing-1bhk-bg.png" alt=""  loading="lazy">
-                            </div>
+                <div class="property-layout-item">
+                    <div class="property-layout-img">
+                        <img src="images/B-Wing-2bhk-bg.png" alt="">
+                        <div class="request-floor-plan">
+                            <a href="" data-bs-toggle="modal" data-bs-target="#enquiryModal">Request Floor Plan</a>
                         </div>
                     </div>
-                    <div id="SectionTab2" class="tab-section d-chart-n">
-                        <div class="tab-section-inner">
-                            <div class="left-tabsection">
-                                <h4 class="common-heading m-0">B Wing - 2 BHK</h4>
-                                <p class="secondary-color m-0">Upgrade your living experience with our 2 BHK flats, designed for families looking for more space, comfort, and convenience.</p>
-                                <ul class="listing">
-                                    <li>Total Area : 858 Square Feets</li>
-                                    <li>Room : 4</li>
-                                    <li>Bed : 2</li>
-                                    <li>Bath : 2</li>
-                                </ul>
-                            </div>
-                            <div class="right-tabsection">
-                                <img src="images/B-Wing-2bhk-bg.png" alt=""  loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                    <div id="SectionTab3" class="tab-section d-chart-n">
-                        <div class="tab-section-inner">
-                            <div class="left-tabsection">
-                                <h4 class="common-heading m-0">B Wing - 2 BHK</h4>
-                                <p class="secondary-color m-0">Looking for a cozy yet stylish home? Our 2 BHK flats offer the perfect combination of functionality and elegance, designed for individuals and small families.</p>
-                                <ul class="listing">
-                                    <li>Total Area : 858 Square Feets</li>
-                                    <li>Room : 4</li>
-                                    <li>Bed : 2</li>
-                                    <li>Bath : 2</li>
-                                </ul>
-                            </div>
-                            <div class="right-tabsection">
-                                <img src="images/B-Wing-2bhk-104-bg.png" alt=""  loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                    <div id="SectionTab4" class="tab-section d-chart-n" >
-                        <div class="tab-section-inner">
-                            <div class="left-tabsection">
-                                <h4 class="common-heading m-0">Under Construction</h4>
-                            </div>
-                            <div class="right-tabsection">
-                                <img src="images/under-construction.png" alt=""  loading="lazy">
-                            </div>
-                        </div>
-                    </div>
+                    <h4 class="mt-2 text-center">2 BHK</h4>
                 </div>
+            </div>
+        </section>
+
+        <section class="pricing-section section_lg">
+            <div class="heading-section"  id="pl-heading">
+                <h2 class="common-heading text-center">Pricing</h2> 
+                <img src="images/leaf-small-img.png" alt=""  loading="lazy">
+            </div>
+            <!-- <hr>  -->
+            <div class="pricing-table container table-responsive">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Configuration</th>
+                            <th scope="col">Floor Plans</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="name">1 BHK </td>
+                            <td class="name">606 sq.ft.*</td> 
+                            <td><a class="btn " href="" data-bs-toggle="modal" data-bs-target="#enquiryModal">Request Price </a></td>
+                        </tr>
+                        <tr>
+                            <td class="name">1 BHK </td>
+                            <td class="name">650 sq.ft.*</td> 
+                            <td><a class="btn " href="" data-bs-toggle="modal" data-bs-target="#enquiryModal">Request Price </a></td>
+                        </tr>
+                        <tr>
+                            <td class="name">2 BHK </td>
+                            <td class="name">873 sq.ft.*</td>
+                            <td><a class="btn " href="" data-bs-toggle="modal" data-bs-target="#enquiryModal">Request Price </a></td>
+                        </tr>
+                        <tr>
+                            <td class="name">2 BHK </td>
+                            <td class="name">938 sq.ft.*</td>
+                            <td><a class="btn " href="" data-bs-toggle="modal" data-bs-target="#enquiryModal">Request Price </a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="video-section section_lg">
+            <div class="heading-section" id="gallery-heading">
+                <h2 class="common-heading text-center">Glimpse of Our Location</h2> 
+                <img src="images/leaf-small-img.png" alt=""  loading="lazy">
+            </div>
+            <!-- <hr>  -->
+            <div class="video-inner container">
+                <video controls muted autoplay loop>
+                    <source src="images/arya-county-video.mp4" type="video/mp4">
+                </video>
             </div>
         </section>
 
@@ -235,65 +235,91 @@
                 <h2 class="common-heading text-center">Amenities</h2> 
                 <img src="images/leaf-small-img.png" alt="" loading="lazy">
             </div>
-            <hr>
-            <div class="container amenities-inner">
-                <div class="amenities-item">
-                    <div class="amenities-overlay"></div>
-                    <img src="images/parking.jpg" alt=""  loading="lazy">
-                    <h6 class="common-heading m-0">Ample Parking Space</h6>
-                </div>
-                <div class="amenities-item">
-                    <div class="amenities-overlay"></div>
-                    <img src="images/gallery2.jpg" alt=""  loading="lazy">
-                    <h6 class="common-heading m-0">Club House</h6>
-                </div>
-                <div class="amenities-item">
-                    <div class="amenities-overlay"></div>
-                    <img src="images/childrens-swimming-pool.avif" alt=""  loading="lazy">
-                    <h6 class="common-heading m-0">Children Swimming Pool</h6>
-                </div>
-                <div class="amenities-item">
-                    <div class="amenities-overlay"></div>
-                    <img src="images/gallery3.jpg" alt=""  loading="lazy">
-                    <h6 class="common-heading m-0">Internal Cement Road</h6>
-                </div>
-                <div class="amenities-item">
-                    <div class="amenities-overlay"></div>
-                    <img src="images/jogging-track.jpg" alt=""  loading="lazy">
-                    <h6 class="common-heading m-0">Jogging Track</h6>
-                </div>
-                <div class="amenities-item">
-                    <div class="amenities-overlay"></div>
-                    <img src="images/children-ground.jpg" alt=""  loading="lazy">
-                    <h6 class="common-heading m-0">Children's Play Area</h6>
-                </div>
-                <div class="amenities-item">
-                    <div class="amenities-overlay"></div>
-                    <img src="images/landscape-garden.jpg" alt=""  loading="lazy">
-                    <h6 class="common-heading m-0">Landscape Garden</h6>
-                </div>
-                <div class="amenities-item">
-                    <div class="amenities-overlay"></div>
-                    <img src="images/party-lawn.jpg" alt=""  loading="lazy">
-                    <h6 class="common-heading m-0">Party Lawn</h6>
-                </div>
-                <div class="amenities-item">
-                    <div class="amenities-overlay"></div>
-                    <img src="images/multipurpose-hall.jpg" alt=""  loading="lazy">
-                    <h6 class="common-heading m-0">Multipurpose Hall</h6>
-                </div>
-                <div class="amenities-item">
-                    <div class="amenities-overlay"></div>
-                    <img src="images/best-location.jpg" alt=""  loading="lazy">
-                    <h6 class="common-heading m-0">Best Location</h6>
-                </div>
-                <div class="amenities-item">
-                    <div class="amenities-overlay"></div>
-                    <img src="images/vastu.jpg" alt=""  loading="lazy">
-                    <h6 class="common-heading m-0">Aesthetically Vastu</h6>
+            <!-- <hr>  -->
+            <div class="container">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="amenities-item">
+                                <div class="amenities-overlay"></div>
+                                <img src="images/parking.jpg" alt=""  loading="lazy">
+                                <h6 class="common-heading m-0">Ample Parking Space</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="amenities-item">
+                                <div class="amenities-overlay"></div>
+                                <img src="images/gallery2.jpg" alt=""  loading="lazy">
+                                <h6 class="common-heading m-0">Club House</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="amenities-item">
+                                <div class="amenities-overlay"></div>
+                                <img src="images/childrens-swimming-pool.avif" alt=""  loading="lazy">
+                                <h6 class="common-heading m-0">Children Swimming Pool</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="amenities-item">
+                                <div class="amenities-overlay"></div>
+                                <img src="images/gallery3.jpg" alt=""  loading="lazy">
+                                <h6 class="common-heading m-0">Internal Cement Road</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="amenities-item">
+                                <div class="amenities-overlay"></div>
+                                <img src="images/jogging-track.jpg" alt=""  loading="lazy">
+                                <h6 class="common-heading m-0">Jogging Track</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="amenities-item">
+                                <div class="amenities-overlay"></div>
+                                <img src="images/children-ground.jpg" alt=""  loading="lazy">
+                                <h6 class="common-heading m-0">Children's Play Area</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="amenities-item">
+                                <div class="amenities-overlay"></div>
+                                <img src="images/landscape-garden.jpg" alt=""  loading="lazy">
+                                <h6 class="common-heading m-0">Landscape Garden</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="amenities-item">
+                                <div class="amenities-overlay"></div>
+                                <img src="images/party-lawn.jpg" alt=""  loading="lazy">
+                                <h6 class="common-heading m-0">Party Lawn</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="amenities-item">
+                                <div class="amenities-overlay"></div>
+                                <img src="images/multipurpose-hall.jpg" alt=""  loading="lazy">
+                                <h6 class="common-heading m-0">Multipurpose Hall</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="amenities-item">
+                                <div class="amenities-overlay"></div>
+                                <img src="images/best-location.jpg" alt=""  loading="lazy">
+                                <h6 class="common-heading m-0">Best Location</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="amenities-item">
+                                <div class="amenities-overlay"></div>
+                                <img src="images/vastu.jpg" alt=""  loading="lazy">
+                                <h6 class="common-heading m-0">Aesthetically Vastu</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <a href="Aarya Green County Brochure.pdf" target="_blank" class="enquiry-btn">Download Brochure <span class="fas fa-download"></span></a>
         </section>
 
         <section class="photo-gallery-section section_lg">
@@ -301,8 +327,8 @@
                 <h2 class="common-heading text-center">Photo Gallery</h2> 
                 <img src="images/leaf-small-img.png" alt=""  loading="lazy">
             </div>
-            <hr>
-            <div class="photo-gallery-inner">
+            <!-- <hr>  -->
+            <div class="photo-gallery-inner container">
                 <img src="images/gallery1.jpg" style="width:100%" onclick="openGallery();currentSlide(1)" class="hover-shadow cursor">
                 <img src="images/gallery2.jpg" style="width:100%" onclick="openGallery();currentSlide(2)" class="hover-shadow cursor">
                 <img src="images/gallery3.jpg" style="width:100%" onclick="openGallery();currentSlide(3)" class="hover-shadow cursor">
@@ -310,33 +336,148 @@
             </div>
         </section>
 
-        <section class="video-section section_lg">
-            <div class="video-overlay"></div>
-            <div class="video-content container">
-                <div class="heading-section" id="video-heading">
-                    <h2 class="common-heading text-white text-center">The Pleasant Surroundings of Nature Will Impress You</h2>
-                    <img src="images/leaf-small-img.png" alt=""  loading="lazy">
-                    <hr>
+        <section class="map-specification section_lg container">
+            <div class="heading-section" id="gallery-heading">
+                <h2 class="common-heading text-center">Specifications</h2> 
+                <img src="images/leaf-small-img.png" alt=""  loading="lazy">
+            </div>
+            <div class="map-spec-inner">
+                <div class="left-map-spec">
+                    <img src="images/map.jpg" alt="" loading="lazy">
                 </div>
-                <p class="text-white m-0 text-center">Imagine waking up to the soothing sounds of birds chirping, the gentle rustling of leaves, and the crisp, refreshing breeze flowing through your home. Nestled amidst lush greenery, our real estate project offers you the perfect blend of modern living and natural beauty.</p>
-                <div class="video-play-div">
-                    <img src="images/video-photo.png" alt=""  loading="lazy" class="video-preview">
-                </div>
-                <i class="fas fa-play" id="playVideoBtn"></i>
-                <div class="player-wave popup-video-inner">
-                    <div class="waves wave-1"></div>
-                    <div class="waves wave-2"></div>
-                    <div class="waves wave-3"></div>
+                <div class="right-map-spec">
+                    <div class="tabs">
+                        <div class="spec-tab" data-target="content1">
+                            <div class="spec-heading">
+                                <h6 class="m-0">RCC Construction</h6>
+                                <img src="images/construction.png" alt=""  loading="lazy">
+                            </div>
+                        </div>
+                        <div class="spec-tab" data-target="content2">
+                            <div class="spec-heading">
+                                <h6 class="m-0">Flooring</h6>
+                                <img src="images/floor.png" alt=""  loading="lazy">
+                            </div>
+                        </div>
+                        <div class="spec-tab" data-target="content3">
+                            <div class="spec-heading">
+                                <h6 class="m-0">Kitchen</h6>
+                                <img src="images/kitchen-set.png" alt=""  loading="lazy">
+                            </div>
+                        </div>
+                        <div class="spec-tab" data-target="content4">
+                            <div class="spec-heading">
+                                <h6 class="m-0">Electrical</h6>
+                                <img src="images/plugin.png" alt=""  loading="lazy">
+                            </div>
+                        </div>
+                        <div class="spec-tab" data-target="content5">
+                            <div class="spec-heading">
+                                <h6 class="m-0">Toilet</h6>
+                                <img src="images/public-toilet.png" alt=""  loading="lazy">
+                            </div>
+                        </div>
+                        <div class="spec-tab" data-target="content6">
+                            <div class="spec-heading">
+                                <h6 class="m-0">Internal Finishing</h6>
+                                <img src="images/interior-design.png" alt=""  loading="lazy">
+                            </div>
+                        </div>
+                        <div class="spec-tab" data-target="content7">
+                            <div class="spec-heading">
+                                <h6 class="m-0">Doors</h6>
+                                <img src="images/door.png" alt=""  loading="lazy">
+                            </div>
+                        </div>
+                        <div class="spec-tab" data-target="content8">
+                            <div class="spec-heading">
+                                <h6 class="m-0 text-center">Windows</h6>
+                                <img src="images/window.png" alt=""  loading="lazy">
+                            </div>
+                        </div>
+                        <div class="spec-tab" data-target="content9">
+                            <div class="spec-heading">
+                                <h6 class="m-0 text-center">External Finishing</h6>
+                                <img src="images/apartment-icon.png" alt=""  loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        <div id="content1" class="spec-content active">
+                            <ul>
+                                <li>RCC frame structure designed as per earthquake-resistant norms.</li>
+                                <li>External Walls with a 6-Inch Width.</li>
+                            </ul>
+                        </div>
+                        <div id="content2" class="spec-content">
+                            <ul>
+                                <li>Good quality reputed brand tiles of size 24" x 24" for all rooms.</li>
+                            </ul>
+                        </div>
+                        <div id="content3" class="spec-content">
+                            <ul>
+                                <li>Granite stone for kitchen otta with stainless steel sink</li>
+                                <li>Designer tiles on kitchen top.</li>
+                                <li>Water Purifier Facility available.</li>
+                                <li>Exhaust Fan Facility available.</li>
+                            </ul>
+                        </div>
+                        <div id="content4" class="spec-content">
+                            <ul>
+                                <li>Modular Switches.</li>
+                                <li>Concealed Fire Resistent Low Smoke Cable.</li>
+                                <li>MCB Circuit Breaker.</li>
+                                <li>Ample Light Points</li>
+                                <li>Water Heater Facility available</li>
+                            </ul>
+                        </div>
+                        <div id="content5" class="spec-content">
+                            <ul>
+                                <li>Concealed Internal Plumbing.</li>
+                                <li>Anti-skid ceramic tile flooring.</li>
+                                <li>Black Granite Doorframe</li>
+                                <li>Hot & cold Shower</li>
+                                <li>Designer Tiles</li>
+                            </ul>
+                        </div>
+                        <div id="content6" class="spec-content">
+                            <ul>
+                                <li>Oil & Distemper color for walls.</li>
+                                <li>Gypsum Finished Plasters.</li>
+                                <li>Crome Plated Brass Fitting</li>
+                            </ul>
+                        </div>
+                        <div id="content7" class="spec-content">
+                            <ul>
+                                <li>Wooden Door Frame with brass fitting for internal doors.</li>
+                                <li>3 track powder coated Aluminium sliding doors for balcony.</li>
+                            </ul>
+                        </div>
+                        <div id="content8" class="spec-content">
+                            <ul>
+                                <li>MS safety grills.</li>
+                                <li>Powder coated Aluminium styling doors for windows.</li>
+                                <li>Granite Window Seal.</li>
+                                <li>Aluminium windows.</li>
+                            </ul>
+                        </div>
+                        <div id="content9" class="spec-content">
+                            <ul>
+                                <li>Texture paint on external walls.</li>
+                                <li>Attractive Elevators.</li>
+                                <li>Apex Colors for exterior walls.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="specification-section section_lg container">
+        <!-- <section class="specification-section section_lg container">
             <div class="heading-section" id="specification-heading">
                 <h2 class="common-heading text-center m-0">Specifications</h2>
                 <img src="images/leaf-small-img.png" alt=""  loading="lazy">
             </div>
-            <hr>
             <div class="specification-inner">
                 <div class="specification-item">
                     <div class="spec-heading">
@@ -440,7 +581,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- <section class="testimonial-section section_lg ">
             <h2 class="common-heading text-center m-0">People Trust Us</h2>
@@ -461,7 +602,6 @@
         </section> -->
 
         <section class="map-section">
-            <img src="images/map-light.jpeg" alt=""  loading="lazy">
         </section>
     </main>
 
@@ -509,7 +649,7 @@
                 <img src="images/rera.png" alt=""  loading="lazy" class="rera-img">
             </div>
         </div>
-        <hr>
+        <hr> 
         <div class="lower-footer">
             <div class="copyright txt-center text-white">Copyrights © 2025 Aarya Green County. All rights reserved.</div>
             <div class="social-icons">
@@ -522,6 +662,8 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <div id="myGallery" class="gallery-div">
         <span class="close cursor" onclick="closeGallery()">&times;</span>
@@ -550,103 +692,104 @@
 
       
     <!-- The Modal -->
-    <div id="enquiryModal" class="modal">
-        <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Property Enquiry Form</h2>
-        <form id="enquiryForm">
-            <div class="form-group">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+    <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content p-3">
+            <div class="modal-header">
+              <h5 class="modal-title" id="enquiryModalLabel">Property Enquiry Form</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <div class="modal-body">
+              <form id="enquiryForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Full Name:</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number:</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message:</label>
+                  <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn submit-btn w-100">Submit Enquiry</button>
+              </form>
             </div>
-            <div class="form-group">
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-            </div>
-            <input type="submit" class="common-btn" value="Submit Enquiry"></input>
-        </form>
+          </div>
         </div>
-    </div>
+      </div>
+      
 
-    <!-- Video Modal -->
-    <div id="videoModal" class="video-modal">
-        <div class="video-modal-content">
-        <span class="close" id="close">&times;</span>
-        <div class="video-container">
-            <iframe id="videoFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-        </div>
-    </div>
-
-      <script>
+    <script>
         // mobile menu
+            $( document ).ready(function() {
 
-$( document ).ready(function() {
+            $( ".cross" ).hide();
+            $( ".menu" ).hide();
+            $( ".canva_expander" ).click(function() {
+            $( ".menu" ).slideToggle( "slow", function() {
+            $( ".canva_expander" ).hide();
+            $( ".cross" ).show();
+            });
+            });
 
-$( ".cross" ).hide();
-$( ".menu" ).hide();
-$( ".canva_expander" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".canva_expander" ).hide();
-$( ".cross" ).show();
-});
-});
+            $( ".cross" ).click(function() {
+            $( ".menu" ).slideToggle( "slow", function() {
+            $( ".cross" ).hide();
+            $( ".canva_expander" ).show();
+            });
+            });
 
-$( ".cross" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".cross" ).hide();
-$( ".canva_expander" ).show();
-});
-});
+            });
 
-});
+            // Close out sub menu
+            $('.sub__close').click(function(e) {
+            e.preventDefault();
 
-// Close out sub menu
-$('.sub__close').click(function(e) {
-e.preventDefault();
+            $(this).parent().parent().removeClass('is-active');
+            });
 
-$(this).parent().parent().removeClass('is-active');
-});
-
-// Trigger sub menu
-$('.menu ul .nav__submenu').click(function(e) {
+            // Trigger sub menu
+            $('.menu ul .nav__submenu').click(function(e) {
 e.preventDefault();
 
 $(this).siblings().addClass('is-active');
 });
-      </script>
-
-<script>
-    const playBtn = document.getElementById("playVideoBtn");
-    const modal = document.getElementById("videoModal");
-    const span = document.getElementById("close");
-    const iframe = document.getElementById("videoFrame");
-  
-    playBtn.onclick = function () {
-      modal.style.display = "block";
-      iframe.src = "./images/website-video.mp4"; // Replace VIDEO_ID
-    };
-  
-    span.onclick = function () {
-      modal.style.display = "none";
-      iframe.src = ""; // Stop video
-    };
-  
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-        iframe.src = "";
-      }
-    };
-  </script>
-  
+    </script>
+    
+     <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        },
+        breakpoints: {
+            640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            },
+            768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            },
+            1024: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+            },
+        },
+        });
+    </script>
 </body>
 </html>

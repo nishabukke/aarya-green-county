@@ -1,66 +1,57 @@
 //   tabs change
 
-function activeTab(evt, id) {
-           
-    // Get all elements with class="tablinks" and remove the class "active"
-     let tabactive = document.getElementsByClassName("TabButtonSelected");
-     tabactive[0].className = tabactive[0].className.replace(" TabButtonSelected", "");
+const tabs = document.querySelectorAll('.spec-tab');
+const contentBoxes = document.querySelectorAll('.spec-content');
 
-     document.getElementById(id).style.display = "block";
-     evt.currentTarget.className += " TabButtonSelected";
+// Function to show one content box and hide others
+function showContent(targetId) {
+  contentBoxes.forEach(box => {
+    box.classList.remove('active');
+  });
 
-     displaySection(evt,id)
- }
- 
-function displaySection(evt, id) {
-
-     let tabactive = document.getElementsByClassName("tab-section");
-     tabactive[0].className = tabactive[0].className.replace(" d-chart-show", "d-chart-n");
-     // add below line of codes
-     [...document.querySelectorAll('div.tab-section')].forEach(item => item.style.display='none')
-     document.getElementById("Section" + id).style.display = "block";
-     evt.currentTarget.className += " d-chart-show";
-
+  const targetBox = document.getElementById(targetId);
+  if (targetBox) {
+    targetBox.classList.add('active');
+  }
 }
 
+// Event listener for tab hover
+tabs.forEach(tab => {
+  tab.addEventListener('mouseenter', () => {
+    const targetId = tab.getAttribute('data-target');
+    showContent(targetId);
+  });
+});
 
-// Modal functions
-function openModal() {
-  document.getElementById("enquiryModal").style.display = "block";
-}
+// Optional: Hide content when not hovering over tab or content
+document.body.addEventListener('mousemove', (e) => {
+  const isOverTab = [...tabs].some(tab => tab.contains(e.target));
+  const isOverContent = [...contentBoxes].some(box => box.contains(e.target));
 
-function closeModal() {
-  document.getElementById("enquiryModal").style.display = "none";
-}
+  if (!isOverTab && !isOverContent) {
+    // Uncomment this if you want to hide all on mouse leave
+    // contentBoxes.forEach(box => box.classList.remove('active'));
+  }
+});
 
-// Form submission (you can modify this to handle the form data as needed)
+
 document.getElementById("enquiryForm").addEventListener("submit", function(e) {
   e.preventDefault();
-  
-  // Here you can add code to handle form submission
-  // For example, collecting form data:
+
   const formData = {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
     phone: document.getElementById("phone").value,
-    propertyType: document.getElementById("propertyType").value,
     message: document.getElementById("message").value
   };
-  
-  console.log("Form submitted with data:", formData);
-  // Add your form submission logic here (e.g., send to server)
-  
-  closeModal();
-  this.reset(); // Reset form fields
-});
 
-// Close modal when clicking outside
-window.onclick = function(event) {
-  const modal = document.getElementById("enquiryModal");
-  if (event.target == modal) {
-    closeModal();
-  }
-}
+  console.log("Form submitted with data:", formData);
+
+  // Reset form and close modal
+  this.reset();
+  const modal = bootstrap.Modal.getInstance(document.getElementById('enquiryModal'));
+  modal.hide();
+});
 
 
 
