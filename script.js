@@ -55,6 +55,38 @@ document.getElementById("enquiryForm").addEventListener("submit", function(e) {
 
 
 
+// thank you modal
+
+document.getElementById('headerForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // prevent page reload
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch('submit-enquiry.php', {
+    method: 'POST',
+    body: formData
+  })
+    .then(response => response.text())
+    .then(result => {
+      if (result.includes("Thank you")) {
+        // Show modal
+        const thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+        thankYouModal.show();
+        form.reset();
+      } else {
+        alert(result); // Show error from PHP
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert("Something went wrong. Please try again.");
+    });
+});
+
+
+
+
 
 
   function openGallery() {

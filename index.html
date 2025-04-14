@@ -998,9 +998,26 @@
             </div>
           </div>
         </div>
-      </div>
-      
+    </div>
 
+    <!-- Thank You Modal -->
+    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+            <div class="modal-header border-0">
+            <h5 class="modal-title w-100" id="thankYouModalLabel">Thank You!</h5>
+            </div>
+            <div class="modal-body">
+            <p>Your enquiry has been successfully submitted. We’ll get back to you soon.</p>
+            </div>
+            <div class="modal-footer border-0 justify-content-center">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+      
     <script>
         // mobile menu
             $( document ).ready(function() {
@@ -1032,10 +1049,10 @@
 
             // Trigger sub menu
             $('.menu ul .nav__submenu').click(function(e) {
-e.preventDefault();
+        e.preventDefault();
 
-$(this).siblings().addClass('is-active');
-});
+        $(this).siblings().addClass('is-active');
+        });
     </script>
     
      <!-- Initialize Swiper -->
