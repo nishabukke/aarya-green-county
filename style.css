@@ -144,7 +144,7 @@ a{
     background-color: #1e1e1e;
     color: #fff;
     font-weight: 500;
-    border-radius: 50px;
+    border-radius: 5px;
     width: max-content;
 }
 
@@ -177,7 +177,7 @@ a{
 }
 
 .swiper-slide img{
-    height: 650px;
+    height: 700px;
     width: 100%;
 }
 
@@ -208,7 +208,7 @@ a{
 
 .right-header-inner .contact-link{
     padding: 5px 20px;
-    border-radius: 50px;
+    border-radius: 5px;
     background-color: #b3cfd3;
     border: 1px solid #0f6e7d;
 }
@@ -220,14 +220,15 @@ a{
 .home-banner-content{
     position: absolute;
     left: 25%;
-    top: 35%;
+    top: 21%;
+    width: 36%;
     transform: translate(-50%, -50px);
     z-index: 1;
 }
 
 .enquiry-btn{
     padding: 5px 20px;
-    border-radius: 50px;
+    border-radius: 5px;
     background-color: #fff;
     border: 1px solid #1e1e1e;
     transition: all .3s ease;
@@ -235,7 +236,7 @@ a{
 
 .enquiry-btn:hover{
     padding: 5px 20px;
-    border-radius: 50px;
+    border-radius: 5px;
     background-color: #1e1e1e;
     color: #fff;
     border: 1px solid #1e1e1e;
@@ -399,7 +400,7 @@ a{
 
 .amenities-section .swiper-pagination-bullet-active{
     background-color: #1e1e1e;
-    border-radius: 50px;
+    border-radius: 5px;
     width: 35px;
     transition: all .2s ease;
 }
@@ -562,8 +563,9 @@ a{
     background-color: #fff;
     color: #1e1e1e;
     padding: 10px 25px;
-    border-radius: 50px;
+    border-radius: 5px;
     font-weight: 500;
+    text-align: center;
 }
 
 .request-floor-plan:hover{
@@ -596,7 +598,7 @@ a{
 
 .pricing-table tbody tr td .btn{
     padding: 10px 25px;
-    border-radius: 50px;
+    border-radius: 5px;
     background-color: #1e1e1e;
     color: #fff;
     border: 1px solid #1e1e1e;
@@ -888,7 +890,9 @@ input[type='submit']{
   
   #headerForm{
     padding: 10px 30px;
-    background: #00000045;
+    background: rgb(0 0 0 / 22%);
+    /* backdrop-filter: saturate(180%) blur(20px); */
+    backdrop-filter: blur(20px);
     border-radius: 5px;
     color: #fff;
   }
@@ -922,15 +926,17 @@ input[type='submit']{
   
   .submit-btn {
     background-color: #1e1e1e;
+    border: 1px solid #1e1e1e;
     color: white;
     padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
+    border-radius: 5px;
     cursor: pointer;
   }
   
   .submit-btn:hover {
-    background-color: #1e1e1e;
+    background-color: #fff;
+    color: #1e1e1e;
+    border: 1px solid #1e1e1e;
   }
 
 
@@ -1088,7 +1094,7 @@ input[type='submit']{
 }
 
 .contact-btn-mobile{
-    border-radius: 50px;
+    border-radius: 5px;
     display: flex;
     margin: 0 auto;
     width: max-content;
@@ -1110,6 +1116,28 @@ input[type='submit']{
 .enquiry-form-section{
     display: none;
 }
+
+
+/* mobile-map-spec section css start */
+
+.mobile-map-spec{
+    display: none;
+}
+.mob-spec{
+    padding: 0;
+}
+
+.mob-spec-content ul{
+    padding-left: 20px;
+}
+
+.mob-spec-content ul li{
+    list-style-type: disc;
+    padding: 5px 0px;
+    font-size: 14px;
+}
+
+/* mobile-map-spec section css end */
 
 @media screen and (max-width:768px){
     .header-inner, .home-banner-content #enquiryForm{
@@ -1264,11 +1292,11 @@ input[type='submit']{
   } 
 
   @media screen and (max-width:450px){
-    .header-inner, .home-banner-content #headerForm{
+    .header-inner, .home-banner-content #headerForm, .map-specification{
         display: none;
     }
     
-    .enquiry-form-section #enquiryForm{
+    .enquiry-form-section #enquiryForm, .mobile-map-spec{
         display: block;
     }
 
@@ -1338,7 +1366,7 @@ input[type='submit']{
     }
 
     .pricing-table tbody tr td, .pricing-table thead tr th {
-        padding: 0;
+        padding: 10px;
     }
 
     .mySlides img {
@@ -1387,26 +1415,28 @@ input[type='submit']{
         height: 30px;
     }
 
-    #highlight-heading img{
-        right: 3%;
-      }
+    #highlight-heading img {
+        right: -1%;
+    }
     
       #pl-heading img {
         right: 4%;
+    }
+      #price-heading img {
+        right: 29%;
     }
     
       #amenities-heading img{
         right: 22%;
       }
     
+      #video-heading img{
+        right: -4%;
+      }
+    
       #gallery-heading img{
         right: 16%;
       }
-    
-        #video-heading img {
-            right: 6%;
-            top: 74%;
-        }
     
       #specification-heading img{
         right: 15%;

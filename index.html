@@ -33,22 +33,40 @@
             </div>
         </div>
         <div class="home-banner-content">
-            <form id="headerForm">
-                <h2 class="common-heading text-white text-center mb-4">Enquire Now</h2>
-                <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required placeholder="Your Name">
+            <form action="submit-enquiry.php" method="POST" class="p-4" id="headerForm">
+                <h4 class="mb-4">Enquire Now</h4>
+              
+                <div class="mb-2">
+                  <label for="name" class="form-label">Full Name *</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
                 </div>
-                <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Your email-id">
+              
+                <div class="mb-2">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
                 </div>
-                <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Your phone no.">
+              
+                <div class="mb-2">
+                  <label for="phone" class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" required>
                 </div>
-                <input type="submit" class="submit-btn" value="Submit Enquiry"></input>
-            </form>
+              
+                <div class="mb-2">
+                  <label for="apartmentType" class="form-label">Apartment Type *</label>
+                  <select class="form-select" id="apartmentType" name="apartment_type" required>
+                    <option value="">Select</option>
+                    <option value="1BHK">1 BHK</option>
+                    <option value="2BHK">2 BHK</option>
+                  </select>
+                </div>
+              
+                <div class="mb-2">
+                  <label for="message" class="form-label">Message (optional)</label>
+                  <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                </div>
+              
+                <button type="submit" class="btn submit-btn w-100">Submit Enquiry</button>
+            </form> 
         </div>
     </header>
 
@@ -79,21 +97,38 @@
     
     <main class="site-content">
         <section class="enquiry-form-section section_lg container pb-0">
-            <form id="enquiryForm">
-                <div class="form-group">
-                    <h2 class="common-heading text-white text-center mb-4">Enquire Now</h2>
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required placeholder="Your Name">
+            <form action="submit-enquiry.php" method="POST" class="p-4" id="enquiryForm">
+                <h4 class="mb-4">Enquire Now</h4>
+                <div class="mb-2">
+                  <label for="name" class="form-label">Full Name *</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
                 </div>
-                <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Your email-id">
+              
+                <div class="mb-2">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
                 </div>
-                <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Your phone no.">
+              
+                <div class="mb-2">
+                  <label for="phone" class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" required>
                 </div>
-                <input type="submit" class="submit-btn" value="Submit Enquiry"></input>
+              
+                <div class="mb-2">
+                  <label for="apartmentType" class="form-label">Apartment Type *</label>
+                  <select class="form-select" id="apartmentType" name="apartment_type" required>
+                    <option value="">Select</option>
+                    <option value="1BHK">1 BHK</option>
+                    <option value="2BHK">2 BHK</option>
+                  </select>
+                </div>
+              
+                <div class="mb-2">
+                  <label for="message" class="form-label">Message (optional)</label>
+                  <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                </div>
+              
+                <button type="submit" class="btn submit-btn w-100">Submit Enquiry</button>
             </form>
         </section>
 
@@ -177,7 +212,7 @@
         </section>
 
         <section class="pricing-section section_lg">
-            <div class="heading-section"  id="pl-heading">
+            <div class="heading-section"  id="price-heading">
                 <h2 class="common-heading text-center">Pricing</h2> 
                 <img src="images/leaf-small-img.png" alt=""  loading="lazy">
             </div>
@@ -218,7 +253,7 @@
         </section>
 
         <section class="video-section section_lg">
-            <div class="heading-section" id="gallery-heading">
+            <div class="heading-section" id="video-heading">
                 <h2 class="common-heading text-center">Glimpse of Our Location</h2> 
                 <img src="images/leaf-small-img.png" alt=""  loading="lazy">
             </div>
@@ -473,6 +508,222 @@
             </div>
         </section>
 
+        <section class="mobile-map-spec section_lg container">
+            <div class="heading-section" id="gallery-heading">
+                <h2 class="common-heading text-center">Specifications</h2> 
+                <img src="images/leaf-small-img.png" alt=""  loading="lazy">
+            </div>
+            <div class="map-spec-inner">
+                <div class="left-map-spec">
+                    <img src="images/map.jpg" alt="" loading="lazy">
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="spec-tab mob-spec" data-target="content1">
+                                <div class="spec-heading">
+                                    <h6 class="m-0">RCC Construction</h6>
+                                </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="mob-spec-content">
+                                <ul>
+                                    <li>Granite stone for kitchen otta with stainless steel sink</li>
+                                    <li>Designer tiles on kitchen top.</li>
+                                    <li>Water Purifier Facility available.</li>
+                                    <li>Exhaust Fan Facility available.</li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <div class="spec-tab mob-spec" data-target="content1">
+                                <div class="spec-heading">
+                                    <h6 class="m-0">Flooring</h6>
+                                </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="mob-spec-content">
+                                <ul>
+                                    <li>Good quality reputed brand tiles of size 24" x 24" for all rooms.</li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="spec-tab mob-spec" data-target="content1">
+                                <div class="spec-heading">
+                                    <h6 class="m-0">Kitchen</h6>
+                                </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mob-spec-content">
+                            <ul>
+                                <li>Granite stone for kitchen otta with stainless steel sink</li>
+                                <li>Designer tiles on kitchen top.</li>
+                                <li>Water Purifier Facility available.</li>    
+                                <li>Exhaust Fan Facility available.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <div class="spec-tab mob-spec" data-target="content1">
+                                <div class="spec-heading">
+                                    <h6 class="m-0">Electrical</h6>
+                                </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="mob-spec-content">
+                                <ul>
+                                    <li>Modular Switches.</li>
+                                    <li>Concealed Fire Resistent Low Smoke Cable.</li>
+                                    <li>MCB Circuit Breaker.</li>
+                                    <li>Ample Light Points</li>
+                                    <li>Water Heater Facility available</li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <div class="spec-tab mob-spec" data-target="content1">
+                                <div class="spec-heading">
+                                    <h6 class="m-0">Toilet</h6>
+                                </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="mob-spec-content">
+                                <ul>
+                                    <li>Concealed Internal Plumbing.</li>
+                                    <li>Anti-skid ceramic tile flooring.</li>
+                                    <li>Black Granite Doorframe</li>
+                                    <li>Hot &amp; cold Shower</li>
+                                    <li>Designer Tiles</li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            <div class="spec-tab mob-spec" data-target="content1">
+                                <div class="spec-heading">
+                                    <h6 class="m-0">Internal Finishing</h6>
+                                </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mob-spec-content">
+                            <ul>
+                                <li>Oil &amp; Distemper color for walls.</li>
+                                <li>Gypsum Finished Plasters.</li>
+                                <li>Crome Plated Brass Fitting</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            <div class="spec-tab mob-spec" data-target="content1">
+                                <div class="spec-heading">
+                                    <h6 class="m-0">Doors</h6>
+                                </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="mob-spec-content">
+                                <ul>
+                                    <li>Wooden Door Frame with brass fitting for internal doors.</li>
+                                    <li>3 track powder coated Aluminium sliding doors for balcony.</li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            <div class="spec-tab mob-spec" data-target="content1">
+                                <div class="spec-heading">
+                                    <h6 class="m-0">Windows</h6>
+                                </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="mob-spec-content">
+                                <ul>
+                                    <li>MS safety grills.</li>
+                                    <li>Powder coated Aluminium styling doors for windows.</li>
+                                    <li>Granite Window Seal.</li>
+                                    <li>Aluminium windows.</li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            <div class="spec-tab mob-spec" data-target="content1">
+                                <div class="spec-heading">
+                                    <h6 class="m-0">External Finishing</h6>
+                                </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="mob-spec-content">
+                            <ul>
+                                <li>Texture paint on external walls.</li>
+                                <li>Attractive Elevators.</li>
+                                <li>Apex Colors for exterior walls.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- <section class="specification-section section_lg container">
             <div class="heading-section" id="specification-heading">
                 <h2 class="common-heading text-center m-0">Specifications</h2>
@@ -627,19 +878,31 @@
             <div class="footer-item">
                 <h3 class="common-heading text-white m-0">Enquiry Form</h3>
                 <form class="footer-form">
-                    <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <input type="submit" class="submit-btn" value="Submit Enquiry"></input>
+                    <div class="mb-2">
+                        <label for="name" class="form-label">Full Name *</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                      </div>
+                    
+                      <div class="mb-2">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                      </div>
+                    
+                      <div class="mb-2">
+                        <label for="phone" class="form-label">Phone Number *</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" required>
+                      </div>
+                    
+                      <div class="mb-2">
+                        <label for="apartmentType" class="form-label">Apartment Type *</label>
+                        <select class="form-select" id="apartmentType" name="apartment_type" required>
+                          <option value="">Select</option>
+                          <option value="1BHK">1 BHK</option>
+                          <option value="2BHK">2 BHK</option>
+                        </select>
+                      </div>
+                    
+                      <button type="submit" class="btn submit-btn w-100">Submit Enquiry</button>
                 </form>
             </div>
             <div class="footer-item">
@@ -701,23 +964,36 @@
             </div>
             <div class="modal-body">
               <form id="enquiryForm">
-                <div class="mb-3">
-                  <label for="name" class="form-label">Full Name:</label>
-                  <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email:</label>
-                  <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="mb-3">
-                  <label for="phone" class="form-label">Phone Number:</label>
-                  <input type="tel" class="form-control" id="phone" name="phone" required>
-                </div>
-                <div class="mb-3">
-                  <label for="message" class="form-label">Message:</label>
-                  <textarea class="form-control" id="message" name="message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn submit-btn w-100">Submit Enquiry</button>
+                <div class="mb-2">
+                    <label for="name" class="form-label">Full Name *</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                  </div>
+                
+                  <div class="mb-2">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                
+                  <div class="mb-2">
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" required>
+                  </div>
+                
+                  <div class="mb-2">
+                    <label for="apartmentType" class="form-label">Apartment Type *</label>
+                    <select class="form-select" id="apartmentType" name="apartment_type" required>
+                      <option value="">Select</option>
+                      <option value="1BHK">1 BHK</option>
+                      <option value="2BHK">2 BHK</option>
+                    </select>
+                  </div>
+                
+                  <div class="mb-2">
+                    <label for="message" class="form-label">Message (optional)</label>
+                    <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                  </div>
+                
+                  <button type="submit" class="btn submit-btn w-100">Submit Enquiry</button>
               </form>
             </div>
           </div>
