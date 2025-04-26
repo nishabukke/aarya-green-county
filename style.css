@@ -13,7 +13,7 @@ body{
     top: 45%;
     transform: rotate(-90deg);
     z-index: 9999;
-    background: #043488;
+    background: #1e1e1e;
     animation: Gradient 3s ease infinite, rocking 3s ease infinite;
     animation-delay: 2s;
     color: #fff;
